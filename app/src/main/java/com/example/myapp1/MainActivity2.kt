@@ -5,6 +5,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
@@ -24,8 +27,8 @@ class MainActivity2 : AppCompatActivity() {
         val tabs: TabLayout = findViewById(R.id.tabs)
         TabLayoutMediator(tabs, viewPager) { tab, position ->
             when (position) {
-                0 -> tab.text = "Fragment One"
-                1 -> tab.text = "Fragment Two"
+                0 -> tab.text = "Couple registration"
+                1 -> tab.text = "Registered couples"
             }
         }.attach()
     }
@@ -33,7 +36,7 @@ class MainActivity2 : AppCompatActivity() {
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
 
-    private val fragments = arrayListOf<Fragment>(registracija(), registrirani())
+    private val fragments = arrayListOf<Fragment>(registration(), registered())
 
     override fun getItemCount(): Int {
         return fragments.size
@@ -44,3 +47,17 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
     }
 
 }
+
+data class Couple (val FemaleDancer : String, val MaleDancer : String, val Category : String)
+
+class ItemViewModel : ViewModel() {
+    private val mutableSelectedItem = MutableLiveData<Couple>()
+    val selectedItem: LiveData<Couple get() = mutableSelectedItem
+
+    fun selectItem(item: Couple) {
+        mutableSelectedItem.value = Couple
+    }
+}
+
+
+

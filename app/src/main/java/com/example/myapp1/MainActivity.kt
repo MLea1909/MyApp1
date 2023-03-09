@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val gumbic1: Button = findViewById(R.id.gumbic_1)
+        val gumbic1: Button = findViewById( R.id.gumbic_1)
         val tekst1: TextView = findViewById(R.id.tekst_1)
         var prikaz = 1
         gumbic1.setOnClickListener {
