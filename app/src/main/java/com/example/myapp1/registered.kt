@@ -57,25 +57,4 @@ class registered : Fragment() {
             }
     }
 
-    class ListFragment : Fragment() {
-        // Using the activityViewModels() Kotlin property delegate from the
-        // fragment-ktx artifact to retrieve the ViewModel in the activity scope
-        private val viewModel: ItemViewModel by activityViewModels()
-
-        // Called when the item is clicked
-        fun onItemClicked(item: Couple) {
-            // Set a new item
-            viewModel.selectItem(item)
-        }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        // Use the Kotlin extension in the fragment-ktx artifact
-        setFragmentResultListener("requestKey") { requestKey, bundle ->
-            // We use a String here, but any type that can be put in a Bundle is supported
-            val result = bundle.getString("bundleKey")
-            // Do something with the result
-        }
-    }
 }

@@ -32,6 +32,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
 }
 
@@ -50,5 +51,10 @@ dependencies {
 }
 
 dependencies {
+
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.databinding:databinding-runtime:7.1.2'
     implementation("androidx.viewpager2:viewpager2:1.0.0")
 }

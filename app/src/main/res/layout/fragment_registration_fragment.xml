@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource"
+    android:orientation="vertical"
+    tools:context="RegistrationFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register couple"
+        android:layout_gravity= "center_horizontal"/>
+
+    <TextView
+        android:id="@+id/femaleDancerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female dancer"
+        android:textSize="30sp"/>
+
+
+    <EditText
+        android:id="@+id/femaleDancer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Enter Name of Female Dancer"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/maleDancerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male dancer"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/maleDancer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Enter Name of Male Dancer"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/couplesCategoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Couples category"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/couplesCategoryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Couples Category"
+        android:inputType="text" />
+
+
+    <TextView
+        android:id="@+id/coreographyNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female dancer"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/coreographyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Couples Category"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_btn"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
